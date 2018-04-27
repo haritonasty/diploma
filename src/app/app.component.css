@@ -1,0 +1,66 @@
+.root {
+  width: 86%;
+  max-width: 400px;
+  margin: 5vh auto 3vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 50px 60px -25px rgba(204, 144, 127, 0.9);
+  height: 68vh;
+}
+
+.card img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.card-reaction {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 0;
+  position: fixed;
+  bottom: 50px;
+  margin: 0 auto;
+  width: inherit;
+  max-width: 400px;
+}
+
+.button {
+  height: 60px;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 0 30px;
+  min-width: 150px;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: 0;
+  transition: transform 0.15s ease;
+}
+
+.button_like {
+  background: rgb(17, 221, 204);
+  box-shadow: 0 6px 20px rgba(17, 221, 204, 0.3);
+  margin-right: 20px;
+}
+
+.button_dislike {
+  background: rgb(238, 34, 51);
+  box-shadow: 0 6px 20px rgba(238, 34, 51, 0.3);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0px);
+}
