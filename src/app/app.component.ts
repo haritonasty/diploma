@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ImageService } from './services/image.service';
-import { AuthService } from './auth/auth.service';
+import {Component, OnInit} from '@angular/core';
+import {ImageService} from './services/image.service';
+import {AuthService} from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +16,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.index = this.imageService.getCurrentIndex();
-    this.image = this.imageService.popImage();
+    this.image = this.imageService.getCurrentImage();
     this.auth.anonymousLogin();
   }
 
-  public changeImage(evulate: number) {
-    this.imageService.setReaction(evulate);
+  public changeImage(evaluate: boolean): void {
+    this.imageService.setReaction(evaluate);
     this.index = this.imageService.getCurrentIndex();
-    this.image = this.imageService.popImage();
+    this.image = this.imageService.getCurrentImage();
   }
 }

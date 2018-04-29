@@ -1,4 +1,6 @@
-export default class User {
+import {Mark} from './Mark';
+
+export class User {
   uid: string;
-  evulates: number[];
+  marks: Mark[];
 }
