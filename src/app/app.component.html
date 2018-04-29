@@ -1,15 +1,30 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="root">
-  <div class="card">
-      <img src="{{image}}" alt="item">
+<div class="card" *ngIf="index">
+  <h2 class="card__counter">Осталось: {{index}}</h2>
+  <div class="card__image">
+    <img src="{{image}}" alt="item">
   </div>
-  <ul class="card-reaction">
-    <li class="card__submit">
-      <button class="button button_like" type="submit" (click)="changeImage('like')">Like</button>
+  <ul class="card__reaction">
+    <li>
+      <button class="button button_like" type="submit" (click)="changeImage(1)">Like</button>
     </li>
-    <li class="card__submit">
-      <button class="button button_dislike" type="submit" (click)="changeImage('dislike')">dislike</button>
+    <li>
+      <button class="button button_dislike" type="submit" (click)="changeImage(0)">dislike</button>
     </li>
   </ul>
+</div>
+
+<div class="card-end" *ngIf="!index">
+  <svg viewBox="0 0 512 512"  width="64px" height="64px" xmlns="http://www.w3.org/2000/svg">
+    <g transform="matrix(1.25 0 0 -1.25 0 45)">
+      <path d="M409.6-168.8c0-113.106-91.694-204.8-204.8-204.8S0-281.906,0-168.8S91.694,36,204.8,36     S409.6-55.694,409.6-168.8" fill="#FFCC4D"/>
+      <path d="m204.8-212.6c-33.746 0-56.149 3.937-83.843 9.318-6.337 1.217-18.637 0-18.637-18.625 0-37.274 42.815-83.854 102.48-83.854s102.48 46.581 102.48 83.854c0 18.625-12.311 19.854-18.637 18.625-27.682-5.382-50.085-9.318-83.843-9.318" fill="#664500"/>
+      <g fill="#E75A70">
+        <path d="m189.44-1.33c-9.774 27.659-40.095 42.177-67.766 32.427-16.794-5.929-28.683-19.468-33.314-35.329-13.551 9.444-31.3 12.516-48.06 6.611-27.659-9.762-42.189-40.107-32.427-67.766 1.388-3.925 3.231-7.543 5.37-10.9 22.198-40.755 86.335-69.404 125.18-69.757 29.992 24.656 61.963 87.199 53.669 132.86-0.431 3.959-1.285 7.942-2.65 11.856"/>
+        <path d="m220.16-1.33c9.774 27.659 40.107 42.177 67.766 32.427 16.805-5.928 28.683-19.467 33.326-35.328 13.551 9.444 31.3 12.516 48.06 6.61 27.648-9.762 42.177-40.107 32.427-67.766-1.399-3.925-3.231-7.543-5.382-10.9-22.198-40.755-86.335-69.404-125.18-69.757-29.992 24.656-61.952 87.199-53.658 132.86 0.432 3.959 1.285 7.942 2.639 11.856"/>
+      </g>
+    </g>
+  </svg>
+  <h2 class="card-end__text">Thank you!</h2>
+
 </div>
 

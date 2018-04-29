@@ -10,15 +10,19 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent implements OnInit {
 
   private image: string;
+  private index: number;
 
   constructor(private imageService: ImageService, public auth: AuthService) {}
 
   ngOnInit() {
+    this.index = this.imageService.getCurrentIndex();
     this.image = this.imageService.popImage();
     this.auth.anonymousLogin();
   }
 
-  public changeImage(evulate: string) {
+  public changeImage(evulate: number) {
+    this.imageService.setReaction(evulate);
+    this.index = this.imageService.getCurrentIndex();
     this.image = this.imageService.popImage();
   }
 }
