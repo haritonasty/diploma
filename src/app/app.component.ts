@@ -9,8 +9,8 @@ import {AuthService} from './auth/auth.service';
 })
 export class AppComponent implements OnInit {
 
-  private image: string;
-  private index: number;
+  public image: string;
+  public index: number;
 
   constructor(private imageService: ImageService, public auth: AuthService) {}
 
